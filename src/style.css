@@ -1,0 +1,36 @@
+/* Tanggalin ang space sa paligid */
+body {
+  margin: 0;
+  background-color: #121212;
+  font-family: sans-serif;
+}
+
+/* Eto ang magtatabi sa picture at text */
+.header {
+  display: flex;
+  align-items: flex-end; /* Naka-pantay sa ibaba */
+  gap: 20px;            /* Agwat ng pic at text */
+  background-color: #690b0b;
+  padding: 30px;
+}
+
+.header img {
+  width: 180px;
+  height: 180px;
+}
+
+/* Text styles */
+p {
+  color: white;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+small {
+  color: #ccc;
+}
