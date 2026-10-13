@@ -1,31 +1,85 @@
+```jsx
 import './style.css';
+
+const songs = [
+  {
+    title: 'Wag Na',
+    artists: 'Realest Cram, CK YG',
+    image: '/genggeng.png',
+    duration: '4:26',
+  },
+  {
+    title: 'ILY',
+    artists: 'Young Blood Neet, Bugoy Na Koykoy',
+    image: '/sillyhoes.png',
+    duration: '2:59',
+  },
+  {
+    title: 'Dikapamigay',
+    artists: 'Realest Cram, ENZO MF',
+    image: '/paumaga.png',
+    duration: '4:17',
+  },
+  {
+    title: 'City Girl',
+    artists: 'Adri.',
+    image: '/citygirl.png',
+    duration: '3:12',
+  },
+  {
+    title: 'So Fine',
+    artists: 'Adri.',
+    image: '/sofine.png',
+    duration: '3:20',
+  },
+  {
+    title: 'Baby 123',
+    artists: 'Adri.',
+    image: '/baby123.png',
+    duration: '3:15',
+  },
+];
 
 function App() {
   return (
-    <section className="playlist-header">
-      <div className="container">
-        {/* Top Header Section */}
-        <div className="header">
-          <img src="/genggeng.png" alt="cover" />
+    <div className="container">
 
-        <div className="details">
+      <div className="playlist">
+        <img src="/genggeng.png" alt="Playlist" />
+
+        <div>
           <p>Public Playlist</p>
           <h1>geng geng Ad</h1>
-          <p className="info">Adri. 49 songs, 2hr 53 min</p>
+          <p>Adri. • 49 songs, 2 hr 53 min</p>
         </div>
       </div>
 
-      {/* Play Button Section */}
-      <div className="action-bar">
-        <button className="play-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path fillRule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" />
-          </svg>
-        </button>
+      <button className="play">▶</button>
+
+      <h2>Playlist Songs</h2>
+
+      <div className="song-list">
+        {songs.map((song, index) => (
+          <div className="song" key={song.title}>
+
+            <span>{index + 1}</span>
+
+            <img src={song.image} alt={song.title} />
+
+            <div className="song-info">
+              <h3>{song.title}</h3>
+              <p>{song.artists}</p>
+            </div>
+
+            <span>{song.duration}</span>
+
+          </div>
+        ))}
       </div>
+
     </div>
-    </section>
   );
 }
 
 export default App;
+```
